@@ -33,16 +33,16 @@ In multi-threading more than one core of the CPU is used at a time. The executio
 * Multi-tasking is done by the operating system to handle multiple tasks. While multi multi-threading can be implemented in the program that you are making, as the program you are making is a task so you cannot multi-task it, it doesn't even make sense. Here is the example of creating a thread in Rust:
     use std::thread
 
-    fn main() {  
-        let handle = thread::spawn(|| {  
-            for i in 1..10 {  
-                print("Hello from new thread!!!");  
-            }  
-        });  
+        fn main() {  
+            let handle = thread::spawn(|| {  
+                for i in 1..10 {  
+                    print("Hello from new thread!!!");  
+                }  
+            });  
 
-        handle.join().unwrap();  
+            handle.join().unwrap();  
 
-        print("Hello from main thread");  
-    }
+            print("Hello from main thread");  
+        }
 
 * Mutli tasking is concerned with the primary memory or RAM. All the executing tasks are stored on the RAM, thus slowing down the over all speed of the computer if too many tasks are opened at the same time. Mutli threading requires a CPU with multiple cores so the task which is performing multi-threading can ask for the threads from the OS.
