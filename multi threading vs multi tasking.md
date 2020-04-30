@@ -31,7 +31,7 @@ In multi-threading more than one core of the CPU is used at a time. The executio
 * Mutlti-tasking is not concerned with cores of the CPU, it can be done by a single core computer too, it is just slow compared to multiple cores. Multi-threading concerns with the cores of the CPU and uses resources.
 
 * Multi-tasking is done by the operating system to handle multiple tasks. While multi multi-threading can be implemented in the program that you are making, as the program you are making is a task so you cannot multi-task it, it doesn't even make sense. Here is the example of creating a thread in Rust:
-    use std::thread
+        use std::thread
 
         fn main() {  
             let handle = thread::spawn(|| {  
