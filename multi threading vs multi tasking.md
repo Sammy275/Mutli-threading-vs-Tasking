@@ -23,3 +23,26 @@ You can imagine multi-threading as dividing one task into many parts. While mult
 When you execute a program or a task, the computer calls it a **Process**. This process, if programmed suitably can be assigned sub-processes or **Threads**. When you open MS Word document, computer calls it a process. You can do so many things, you can edit, print, save etc. But have you ever noticed that when you are saving a document, you cannot write anything else or when you are writing you cant change the text-color. The computer are just so fast the you cannot notice it but both of these things cannot happen at once. But when you are playing a game, you can hear the sounds, you can see objects, you can run while hearing things. The game is process or a task, the sounds that you hear, the zombies that you shoot, the sprint that you make are all sub-processes.
 
 In multi-threading more than one core of the CPU is used at a time. The executions are happening in parallel. Sometimes these executions depends on the results of other executions. Multi-threading is done when a program is CPU intensive. You can divide a task into multiple threads to quickly perform it.
+
+## Comparison:
+
+* Multi-tasking is done by scheduling tasks and priorotizing them, which is also known as context-switching. Multi-threading is done by involving multiple cores of the CPU.
+
+* Mutlti-tasking is not concerned with cores of the CPU, it can be done by a single core computer too, it is just slow compared to multiple cores. Multi-threading concerns with the cores of the CPU and uses resources.
+
+* Multi-tasking is done by the operating system to handle multiple tasks. While multi multi-threading can be implemented in the program that you are making, as the program you are making is a task so you cannot multi-task it, it doesn't even make sense. Here is the example of creating a thread in Rust:
+    use std::thread
+
+    fn main() {
+        let handle = thread::spawn(|| {
+            for i in 1..10 {
+                print("Hello from new thread!!!");
+            }
+        });
+
+        handle.join().unwrap()
+
+        print("Hello from main thread");
+    }
+
+* Mutli tasking is concerned with the primary memory or RAM. All the executing tasks are stored on the RAM, thus slowing down the over all speed of the computer if too many tasks are opened at the same time. Mutli threading requires a CPU with multiple cores so the task which is performing multi-threading can ask for the threads from the OS.
