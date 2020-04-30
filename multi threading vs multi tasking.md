@@ -9,3 +9,6 @@ Let us first start with multi-tasking.
 
 ## Multi-Tasking:
 
+Imagine that you are working as a seceratory in some office. You have multiple things you have to do currently. You can also call these *things* a **task**.  
+Each of these task requires your focus and attention span. Say you have to call and confirm meeting's time, on the other hand you have to book a time slot for your presentation, and you also have to stack some folders. All these jobs or *tasks* you have to do has to be done right now. So what you will do is give each of them some time. You will divide your attention or time to complete these tasks. First you will stack your folders and then quickly respond to email and then do something else. It might be really hard for you but it is really easy for the computer.
+
